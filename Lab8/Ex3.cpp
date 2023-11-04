@@ -20,8 +20,7 @@ public:
     // copy constructor
     Calculate(const Calculate &oldCalc) {
         a = oldCalc.a;
-        lastOp = ' ';
-        lastValue = 0;
+        count = 0; // Resetting count for the new object
     }
     double getValue() {
         return a;
@@ -127,7 +126,7 @@ int main(void) {
 
     for (i = 0; i < 10; ++i) {
         cout << "Stored the last math operation:";
-        flag = cc.lastOperation(op, value);
+        flag = dd.lastOperation(op, value);
         if (!flag)
             cout << "None" << endl;
         else
